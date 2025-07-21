@@ -1,4 +1,4 @@
-/* --------------------------------Menu---------------------------------- */
+/* ------------------- ESTILO GENERAL NAVBAR ------------------- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -6,8 +6,6 @@
     background-color: white;
     padding: 15px 25px;
     box-shadow: 0px 10px 34px 3px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 10px 34px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 34px 3px rgba(0, 0, 0, 0.75);
     z-index: 1000;
 }
 
@@ -20,15 +18,7 @@
     height: 50px;
 }
 
-/* Botón hamburguesa (oculto por defecto) */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: rgb(68, 68, 68);
-    margin-right: 40px;
-}
-
+/* ------------------- MENÚ ------------------- */
 .Menus {
     list-style: none;
     display: flex;
@@ -41,10 +31,7 @@
 }
 
 .Menus li:hover {
-    transition: 0.3s;
     transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
 }
 
 .Menus li a {
@@ -54,36 +41,45 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    transition: color 0.3s;
     font-family: 'Open Sans', sans-serif;
+    transition: color 0.3s;
 }
 
 .Menus li a:hover {
     color: #1E5B6E;
-    /* Color de resalte */
 }
 
-/* --------------------------------------------------------------------------- */
+/* ------------------- BOTÓN HAMBURGUESA ------------------- */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(68, 68, 68);
+    margin-right: 40px;
+}
 
-/* Teléfonos pequeños */
-@media (max-width: 375px) {}
+/* ------------------- MEDIA QUERY: TABLETS Y MÓVILES ------------------- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
 
-/* Teléfonos medianos */
-
-
-@media (max-width: 603px) {
     .Menus {
         display: none;
         flex-direction: column;
         position: absolute;
-        background-color: white;
-        top: 60px;
+        top: 70px;
         right: 20px;
-        width: 220px; /* reemplaza 30vh por px */
+        background-color: white;
+        width: 220px;
         border-radius: 8px;
         padding: 10px 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         z-index: 999;
+    }
+
+    .Menus.active {
+        display: flex;
     }
 
     .Menus li {
@@ -91,93 +87,17 @@
         padding: 12px 20px;
     }
 
-    .Menus.active {
-        display: flex;
-        /* Muestra el menú cuando se abre */
+    .Menus li a {
+        color: #1E5B6E;
+        top: 0;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* Tablets */
-@media (max-width: 768px) {
-    .Menus {
-        margin-right: 5%;
-    }
-}
-
-/* Estilos base */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
-
-.navbar .logo img {
-    height: 50px;
-}
-
-.Menus {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.Menus li a {
-    text-decoration: none;
-    color: #1E5B6E;
-    font-weight: bold;
-}
-
-/* Ícono hamburguesa oculto en escritorio */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* Menú base */
-.Menus {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .Menus {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px; /* distancia fija desde el top */
-        right: 20px;
-        background-color: white;
-        width: 200px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        border-radius: 8px;
-        padding: 10px 0;
-        z-index: 999;
-    }
-
-    .Menus.active {
-        display: flex;
-    }
-
-    .Menus li {
+    .navbar {
         padding: 10px 20px;
     }
 
-    .Menus li a {
-        color: #1E5B6E;
+    .Menus {
+        margin-right: 0;
     }
 }
+
