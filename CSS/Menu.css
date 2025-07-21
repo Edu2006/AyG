@@ -78,15 +78,17 @@
         position: absolute;
         background-color: white;
         top: 60px;
-        text-align: left;
-        width: 30vh;
-        height: 42vh;
-        right: -30px;
-        border-radius: 0 0 0 5px;
+        right: 20px;
+        width: 220px; /* reemplaza 30vh por px */
+        border-radius: 8px;
+        padding: 10px 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 999;
     }
 
-    .Menus li{
-        margin-top: -10px;
+    .Menus li {
+        margin: 0;
+        padding: 12px 20px;
     }
 
     .Menus.active {
@@ -96,6 +98,13 @@
 
     .menu-toggle {
         display: block;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .Menus {
+        margin-right: 5%;
     }
 }
 
@@ -133,7 +142,14 @@
     cursor: pointer;
 }
 
-/* Estilos responsivos */
+/* Menú base */
+.Menus {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -143,13 +159,14 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 70px; /* distancia fija desde el top */
         right: 20px;
         background-color: white;
         width: 200px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         border-radius: 8px;
         padding: 10px 0;
+        z-index: 999;
     }
 
     .Menus.active {
@@ -162,13 +179,5 @@
 
     .Menus li a {
         color: #1E5B6E;
-    }
-}
-
-
-/* Tablets */
-@media (max-width: 768px) {
-    .Menus {
-        margin-right: 5%;
     }
 }
