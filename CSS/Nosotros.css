@@ -42,10 +42,25 @@ body {
 
 .imagen img {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    margin-top: 50px;
 }
 
 footer {
     position: relative;
     margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    .imagen img {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imagen img {
+        max-height: 300px;
+    }
 }
