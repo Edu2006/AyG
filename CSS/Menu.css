@@ -99,6 +99,73 @@
     }
 }
 
+/* Estilos base */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.Menus {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.Menus li a {
+    text-decoration: none;
+    color: #1E5B6E;
+    font-weight: bold;
+}
+
+/* Ícono hamburguesa oculto en escritorio */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .Menus {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: white;
+        width: 200px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 10px 0;
+    }
+
+    .Menus.active {
+        display: flex;
+    }
+
+    .Menus li {
+        padding: 10px 20px;
+    }
+
+    .Menus li a {
+        color: #1E5B6E;
+    }
+}
+
+
 /* Tablets */
 @media (max-width: 768px) {
     .Menus {
