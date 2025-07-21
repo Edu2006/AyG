@@ -1,0 +1,483 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+main {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+    padding: 40px 20px;
+}
+
+.textos .CuadroText {
+    position: relative;
+    display: flex;
+    margin-top: 40px;
+    width: 70%;
+    height: 300px;
+    flex-direction: row;
+    transition: 0.3s;
+}
+
+.CuadroText,
+.CuadroTextReverso {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    transition: 0.3s;
+    align-items: center;
+    gap: 30px;
+}
+
+.textos .CuadroText:hover {
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    transition: 0.3s;
+}
+
+.textos .CuadroText .imgDer {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 100%;
+}
+
+.textos .CuadroText .imgDer img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.textos .CuadroText .textoIzq {
+    position: relative;
+    width: 600px;
+    height: 100%;
+}
+
+.textos .CuadroText .textoIzq h2 {
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.textos .CuadroText .textoIzq p {
+    font-size: 20px;
+    color: #4A4A4A;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.textos .CuadroTextReverso {
+    position: relative;
+    display: flex;
+    margin-top: 40px;
+    width: 70%;
+    height: 300px;
+    flex-direction: row-reverse;
+    transition: 0.3s;
+}
+
+.textos .CuadroTextReverso:hover {
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    transition: 0.3s;
+}
+
+.textos .CuadroTextReverso .imgDer {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 100%;
+}
+
+.textos .CuadroTextReverso .imgDer img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.textos .CuadroTextReverso .textoIzq {
+    position: relative;
+    width: 600px;
+    height: 100%;
+}
+
+.textos .CuadroTextReverso .textoIzq h2 {
+    margin-right: 30px;
+    margin-top: 30px;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.textos .CuadroTextReverso .textoIzq p {
+    margin-right: 30px;
+    font-size: 20px;
+    text-align: right;
+    color: #4A4A4A;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.Imagen {
+    background-image: url(../IMG/4154f596054b.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 70px;
+    position: relative;
+    justify-content: left;
+    margin-top: 100px;
+    z-index: 5;
+}
+
+.Imagen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(40%);
+    z-index: 1;
+}
+
+.Imagen .texto {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-left: 100px;
+    align-content: center;
+    z-index: 10;
+}
+
+.Imagen .texto h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.Imagen .texto ul {
+    position: relative;
+    text-align: left;
+    margin-left: 30px;
+    top: 30px;
+}
+
+.Imagen .texto ul li {
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: white;
+    z-index: 20;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+.imgcarrousel {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    max-height: 80vh;
+}
+
+.Empresa {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    height: 50vh;
+    width: 100%;
+}
+
+.Empresa .textoEmp {
+    display: flex;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Empresa .textoEmp h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #1E5B6E;
+}
+
+.Empresa .textoEmp p {
+    margin-top: 15px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4A4A4A;
+}
+
+.Empresa .imgEmp {
+    display: flex;
+    position: relative;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+}
+
+.Empresa .imgEmp img {
+  width: auto;
+  height: auto; /* Esto permite que la altura se ajuste proporcionalmente al ancho */
+  max-width: 500px; /* Tamaño máximo para pantallas grandes */
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .Empresa .imgEmp img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Empresa .imgEmp img {
+    max-width: 200px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .Empresa {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .Empresa .textoEmp {
+    width: 90%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .Empresa .textoEmp h1 {
+    font-size: 28px;
+  }
+
+  .Empresa .textoEmp p {
+    font-size: 16px;
+  }
+
+  .Empresa .imgEmp {
+    width: 60%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .Empresa .imgEmp img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .Empresa .textoEmp h1 {
+    font-size: 22px;
+  }
+
+  .Empresa .textoEmp p {
+    font-size: 14px;
+  }
+
+  .Empresa .imgEmp {
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+    .CuadroText,
+    .CuadroTextReverso {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .textoIzq {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .textoIzq h2 {
+        font-size: 20px;
+    }
+
+    .textoIzq p {
+        font-size: 16px;
+    }
+
+    .imgDer {
+        max-width: 70%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive para móviles pequeños */
+@media (max-width: 425px) {
+    .imgDer {
+        max-width: 90%;
+    }
+
+    .textoIzq {
+        width: 95%;
+    }
+}
+
+@media (max-width: 375px) {
+    .imgcarrousel {
+        display: block;
+        width: 100%;
+        height: 80vh;
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .textos .CuadroText,
+    .textos .CuadroTextReverso {
+        width: 90%;
+    }
+
+    .textos .CuadroText .textoIzq,
+    .textos .CuadroTextReverso .textoIzq {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .textos .CuadroText,
+    .textos .CuadroTextReverso {
+        flex-direction: column !important;
+        height: auto;
+        align-items: center;
+    }
+
+    .textos .CuadroText .imgDer,
+    .textos .CuadroTextReverso .imgDer {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .textos .CuadroText .textoIzq,
+    .textos .CuadroTextReverso .textoIzq {
+        width: 90%;
+        text-align: center;
+    }
+
+    .textos .CuadroTextReverso .textoIzq h2,
+    .textos .CuadroTextReverso .textoIzq p {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .textos .CuadroText .textoIzq h2,
+    .textos .CuadroTextReverso .textoIzq h2 {
+        margin-top: 10px;
+        font-size: 22px;
+    }
+
+    .textos .CuadroText .textoIzq p,
+    .textos .CuadroTextReverso .textoIzq p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .textos .CuadroText .imgDer,
+    .textos .CuadroTextReverso .imgDer {
+        width: 100%;
+    }
+
+    .textos .CuadroText,
+    .textos .CuadroTextReverso {
+        width: 100%;
+    }
+
+    .textos .CuadroText .textoIzq,
+    .textos .CuadroTextReverso .textoIzq {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Imagen .texto {
+        width: 70%;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Imagen {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .Imagen .texto {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .Imagen .texto h1 {
+        font-size: 28px;
+    }
+
+    .Imagen .texto ul {
+        margin-left: 0;
+        top: 20px;
+    }
+
+    .Imagen .texto ul li {
+        font-size: 16px;
+        margin-top: 15px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 425px) {
+    .Imagen {
+        background-position: center;
+        padding: 40px 0;
+    }
+
+    .Imagen .texto h1 {
+        font-size: 24px;
+    }
+
+    .Imagen .texto ul li {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}

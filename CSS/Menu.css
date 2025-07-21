@@ -1,0 +1,107 @@
+/* --------------------------------Menu---------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 25px;
+    box-shadow: 0px 10px 34px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 34px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 34px 3px rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    position: relative;
+    left: 40px;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+/* Botón hamburguesa (oculto por defecto) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(68, 68, 68);
+    margin-right: 40px;
+}
+
+.Menus {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-right: 100px;
+}
+
+.Menus li {
+    transition: 0.3s;
+}
+
+.Menus li:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+}
+
+.Menus li a {
+    position: relative;
+    top: 7px;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.Menus li a:hover {
+    color: #1E5B6E;
+    /* Color de resalte */
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Teléfonos pequeños */
+@media (max-width: 375px) {}
+
+/* Teléfonos medianos */
+
+
+@media (max-width: 603px) {
+    .Menus {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        top: 60px;
+        text-align: left;
+        width: 30vh;
+        height: 42vh;
+        right: -30px;
+        border-radius: 0 0 0 5px;
+    }
+
+    .Menus li{
+        margin-top: -10px;
+    }
+
+    .Menus.active {
+        display: flex;
+        /* Muestra el menú cuando se abre */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .Menus {
+        margin-right: 5%;
+    }
+}
